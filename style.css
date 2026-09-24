@@ -78,3 +78,40 @@ p { font-size: 15px; color: var(--muted); margin: 0; line-height: 1.45; }
 @media (prefers-reduced-motion: reduce) {
   .icon, .spinner { animation: none; }
 }
+
+/* FAQ */
+body.doc {
+  display: block;
+  padding: 24px 16px 48px;
+}
+.doc main {
+  max-width: 640px;
+  margin: 0 auto;
+  align-items: stretch;
+  text-align: left;
+  gap: 12px;
+}
+.doc header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.doc h1 { font-size: 28px; font-weight: 700; }
+.doc .switch { color: var(--accent); font-size: 15px; text-decoration: none; white-space: nowrap; }
+details {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+summary {
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--muted); font-weight: 400; }
+details[open] summary::after { content: "−"; }
+details p, details ul { margin: 12px 0 0; font-size: 15px; line-height: 1.6; color: var(--muted); }
+details ul { padding-left: 20px; }
+details li + li { margin-top: 4px; }
+details b { color: var(--text); font-weight: 600; }
